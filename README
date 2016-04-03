@@ -1,6 +1,6 @@
 Installation:
 
-    git clone path-to-git ~/.rc
+    git clone https://github.com/Leeheng86/shell_cfg.git ~/.rc
     pip install --user git+git://github.com/powerline/powerline
 
 Create symlinks:
