@@ -1,0 +1,14 @@
+Installation:
+
+    git clone path-to-git ~/.rc
+    pip install --user git+git://github.com/powerline/powerline
+
+Create symlinks:
+
+    ln -s ~/.rc/bashrc ~/.bashrc
+    ln -s ~/.rc/profile ~/.profile
+    ln -s ~/.rc/tmux.conf ~/.tmux.conf
+
+Install fonts:
+
+    open *.otf
