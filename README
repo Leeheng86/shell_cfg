@@ -5,9 +5,7 @@ Installation:
 
 Create symlinks:
 
-    ln -s ~/.rc/bashrc ~/.bashrc
-    ln -s ~/.rc/profile ~/.profile
-    ln -s ~/.rc/tmux.conf ~/.tmux.conf
+    ln -s ~/.rc/bashrc ~/.bashrc; ln -s ~/.rc/profile ~/.profile; ln -s ~/.rc/tmux.conf ~/.tmux.conf
 
 Install fonts:
 
