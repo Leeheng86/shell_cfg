@@ -10,3 +10,11 @@ Create symlinks:
 Install fonts:
 
     open *.otf
+
+Adding or deleting segments by modifying:
+
+On Mac
+    vim ~/Library/Python/2.7/lib/python/site-packages/powerline/config_files/themes/tmux/default.json
+
+On Ubuntu
+    vim ~/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.json
