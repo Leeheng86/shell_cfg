@@ -1,6 +1,6 @@
 #eval `ssh-agent -s`
 
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
 
@@ -29,6 +29,6 @@ parse_git_branch (){
    git name-rev HEAD 2> /dev/null | sed 's#HEAD\ \(.*\)# [\1]#'
 }
 
-export JAVA_HOME=$(readlink /usr/bin/java | sed "s:jre/bin/java::")
+#export JAVA_HOME=$(readlink /usr/bin/java | sed "s:jre/bin/java::")
 export PATH=$PATH:~/.local/bin
 export PATH="$PATH:$HOME/.rvm/bin"
