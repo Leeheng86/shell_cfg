@@ -5,7 +5,7 @@ Installation:
 
 Create symlinks:
 
-    ln -s ~/.rc/bashrc ~/.bashrc; ln -s ~/.rc/profile ~/.profile; ln -s ~/.rc/tmux.conf ~/.tmux.conf
+    ln -s ~/.rc/bashrc ~/.bashrc; ln -s ~/.rc/zshrc ~/.zshrc; ln -s ~/.rc/profile ~/.profile; ln -s ~/.rc/tmux.conf ~/.tmux.conf
 
 Adding or deleting segments by modifying:
 
