@@ -5,9 +5,17 @@ Installation:
 
 Create symlinks:
 
-    ln -s ~/.rc/bashrc ~/.bashrc; ln -s ~/.rc/zshrc ~/.zshrc; ln -s ~/.rc/profile ~/.profile; ln -s ~/.rc/tmux.conf ~/.tmux.conf
+    ln -s ~/.rc/bashrc ~/.bashrc
+    ln -s ~/.rc/zshrc ~/.zshrc
+    ln -s ~/.rc/profile ~/.profile
+    ln -s ~/.rc/tmux.conf ~/.tmux.conf
 
-Adding or deleting segments by modifying:
+Shell config:
+
+    All settings are in common.sh. Both bashrc and zshrc source it,
+    so changes only need to be made in one place.
+
+Adding or deleting tmux powerline segments by modifying:
 
 On Mac
     vim ~/Library/Python/3.x/lib/python/site-packages/powerline/config_files/themes/tmux/default.json
