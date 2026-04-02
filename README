@@ -10,16 +10,17 @@ Create symlinks:
     ln -s ~/.rc/profile ~/.profile
     ln -s ~/.rc/tmux.conf ~/.tmux.conf
     ln -s ~/.rc/claude/settings.json ~/.claude/settings.json
+    ln -s ~/.rc/claude/mcp.json ~/.claude/mcp.json
 
 Claude config:
 
     All Claude Code settings are in claude/. settings.json is symlinked
     to ~/.claude/settings.json.
 
-    For MCP servers with API keys, copy claude/mcp.example.json to
-    claude/mcp.json (gitignored) and fill in the values. Store the
-    actual API keys in claude/.secrets (gitignored) as export statements,
-    they will be sourced automatically by common.sh.
+    MCP server configs are in claude/mcp.json. API keys are referenced
+    as environment variables (e.g. $MY_API_KEY). Store the actual values
+    in claude/.secrets (gitignored) as export statements, they will be
+    sourced automatically by common.sh.
 
 Shell config:
 
