@@ -1,4 +1,4 @@
-#eval `ssh-agent -s`
+eval "$(ssh-agent -s)"
 
 #alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
@@ -7,6 +7,7 @@
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias rsyncc='rsync -avh --progress --partial'
 
 export CLICOLOR=1
 export TERM=xterm-color
@@ -32,3 +33,9 @@ parse_git_branch (){
 #export JAVA_HOME=$(readlink /usr/bin/java | sed "s:jre/bin/java::")
 export PATH=$PATH:~/.local/bin
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/bin"
+
+# ./venv/bin/python3 crawler.py --start-date 2026-01-02 --end-date 2026-02-07
+# rsync -avh --progress --partial /Volumes/MacTSB16T/ByName* /Volumes/ExplicitContent/Names/
+# rsync -avh --progress --partial /Volumes/MacTSB12T/B/* /Volumes/ExplicitContent/B/
+# rsync -avh --progress --partial /Volumes/MacTSB12T/A /Volumes/ExplicitContent/
