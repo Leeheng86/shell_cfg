@@ -7,14 +7,10 @@ Create symlinks:
 
     ln -s ~/.rc/bashrc ~/.bashrc; ln -s ~/.rc/profile ~/.profile; ln -s ~/.rc/tmux.conf ~/.tmux.conf
 
-Install fonts:
-
-    open *.otf
-
 Adding or deleting segments by modifying:
 
 On Mac
-    vim ~/Library/Python/2.7/lib/python/site-packages/powerline/config_files/themes/tmux/default.json
+    vim ~/Library/Python/3.x/lib/python/site-packages/powerline/config_files/themes/tmux/default.json
 
 On Ubuntu
-    vim ~/.local/lib/python2.7/site-packages/powerline/config_files/themes/tmux/default.json
+    vim ~/.local/lib/python3.x/site-packages/powerline/config_files/themes/tmux/default.json
