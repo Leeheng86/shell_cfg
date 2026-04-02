@@ -1,5 +1,7 @@
 eval "$(ssh-agent -s)"
 
+[ -f ~/.rc/claude/.secrets ] && source ~/.rc/claude/.secrets
+
 #alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
 #alias vdir='vdir --color=auto'
