@@ -11,6 +11,7 @@ Create symlinks:
     ln -s ~/.rc/tmux.conf ~/.tmux.conf
     ln -s ~/.rc/claude/settings.json ~/.claude/settings.json
     ln -s ~/.rc/claude/mcp.json ~/.claude/mcp.json
+    ln -s ~/.rc/claude/statusline-command.sh ~/.claude/statusline-command.sh
 
 Claude config:
 
