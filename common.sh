@@ -1,4 +1,4 @@
-eval "$(ssh-agent -s)"
+# eval "$(ssh-agent -s)"  # commented out: conflicts with yk's ssh-agent management
 
 [ -f ~/.rc/claude/.secrets ] && source ~/.rc/claude/.secrets
 
