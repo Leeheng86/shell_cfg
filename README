@@ -1,10 +1,11 @@
 Installation:
 
-    git clone https://github.com/Leeheng86/shell_cfg.git ~/.rc
-    pip install --user git+git://github.com/powerline/powerline
+    # 1. Clone this repo, install powerline, and install tmux plugin manager
+    git clone https://github.com/Leeheng86/shell_cfg.git ~/.rc \
+      && pip install --user git+git://github.com/powerline/powerline \
+      && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-Create symlinks:
-
+    # 2. Create symlinks
     ln -s ~/.rc/bashrc ~/.bashrc
     ln -s ~/.rc/zshrc ~/.zshrc
     ln -s ~/.rc/profile ~/.profile
@@ -12,6 +13,12 @@ Create symlinks:
     ln -s ~/.rc/claude/settings.json ~/.claude/settings.json
     ln -s ~/.rc/claude/mcp.json ~/.claude/mcp.json
     ln -s ~/.rc/claude/statusline-command.sh ~/.claude/statusline-command.sh
+
+    # 3. Install tmux plugins (reads ~/.tmux.conf, so run AFTER the symlink above).
+    # This installs tmux-resurrect + tmux-continuum, which auto-save session
+    # layout / cwd / scrollback every 15 min and restore on tmux startup — useful
+    # when airdev pods cycle and tmux dies.
+    ~/.tmux/plugins/tpm/bin/install_plugins
 
 Claude config:
 
