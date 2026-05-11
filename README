@@ -1,18 +1,25 @@
 Installation:
 
-    # 1. Clone this repo, install powerline, and install tmux plugin manager
+    # 1. Clone this repo, install powerline, and install tmux plugin manager.
+    #    Use https for powerline (GitHub stopped supporting git:// in 2022).
+    #    Falls back to PyPI if pip can't reach github.com (e.g. on locked-down
+    #    corporate machines / airdev workspaces).
     git clone https://github.com/Leeheng86/shell_cfg.git ~/.rc \
-      && pip install --user git+git://github.com/powerline/powerline \
+      && (pip install --user powerline-status \
+          || pip install --user git+https://github.com/powerline/powerline) \
       && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-    # 2. Create symlinks
-    ln -s ~/.rc/bashrc ~/.bashrc
-    ln -s ~/.rc/zshrc ~/.zshrc
-    ln -s ~/.rc/profile ~/.profile
-    ln -s ~/.rc/tmux.conf ~/.tmux.conf
-    ln -s ~/.rc/claude/settings.json ~/.claude/settings.json
-    ln -s ~/.rc/claude/mcp.json ~/.claude/mcp.json
-    ln -s ~/.rc/claude/statusline-command.sh ~/.claude/statusline-command.sh
+    # 2. Create symlinks (use -sf to overwrite any existing dotfiles, and
+    #    mkdir ~/.claude first since it may not exist on a fresh machine).
+    mkdir -p ~/.claude
+    ln -sf ~/.rc/bashrc ~/.bashrc
+    ln -sf ~/.rc/zshrc ~/.zshrc
+    ln -sf ~/.rc/profile ~/.profile
+    ln -sf ~/.rc/tmux.conf ~/.tmux.conf
+    ln -sf ~/.rc/claude/settings.json ~/.claude/settings.json
+    ln -sf ~/.rc/claude/mcp.json ~/.claude/mcp.json
+    ln -sf ~/.rc/claude/statusline-command.sh ~/.claude/statusline-command.sh
+    chmod +x ~/.rc/claude/statusline-command.sh
 
     # 3. Install tmux plugins (reads ~/.tmux.conf, so run AFTER the symlink above).
     # This installs tmux-resurrect + tmux-continuum, which auto-save session
