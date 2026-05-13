@@ -13,7 +13,7 @@ alias egrep='egrep --color=auto'
 alias rsyncc='rsync -avh --progress --partial'
 
 export CLICOLOR=1
-export TERM=xterm-color
+export TERM=xterm-256color
 export LSCOLORS=Dxfxcxdxbxegedabagacad
 # For colourful man pages (CLUG-Wiki style)
 export LESS_TERMCAP_mb=$'\E[01;31m'

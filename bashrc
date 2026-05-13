@@ -20,7 +20,7 @@ alias airchat="airchat claude -- --permission-mode auto --effort high --model op
 # 4_
 
 export CLICOLOR=1
-export TERM=xterm-color
+export TERM=xterm-256color
 export LSCOLORS=Dxfxcxdxbxegedabagacad
 # For colourful man pages (CLUG-Wiki style)
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -67,3 +67,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # leeheng_ma@leeheng-ma-bigair.ws.airdev.musta.ch:/tmp/
 # ./silla_request.sh | python3 -m json.tool
+# airtool install airchat-cli -t test-leeheng-ma
