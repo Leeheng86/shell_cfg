@@ -37,6 +37,27 @@ Claude config:
     in claude/.secrets (gitignored) as export statements, they will be
     sourced automatically by common.sh.
 
+Google Docs MCP (local, lets Claude Code read/edit your Google Docs):
+
+    Why: edits specific paragraphs/sections (batchUpdate) and reads Drive
+    files with YOUR OAuth creds — things the claude.ai-hosted connector can't.
+
+    One-time setup (see claude/google-docs-mcp-setup.md for the full guide):
+      1. Google Cloud: new project, enable Docs API + Drive API, OAuth consent
+         (External, add your gmail to Test users), create Desktop OAuth client,
+         download the client_secret JSON.
+      2. mkdir -p ~/.google-docs-mcp && mv ~/Downloads/client_secret_*.json \
+           ~/.google-docs-mcp/credentials.json && chmod 600 ~/.google-docs-mcp/credentials.json
+      3. bash ~/.rc/claude/google-docs-run-auth.sh      # browser OAuth, writes token.json
+
+    One-line install (registers the server in ~/.claude.json):
+
+      bash ~/.rc/claude/install-google-docs-mcp.sh
+
+    Then restart Claude Code; tools appear as mcp__google-docs__*.
+    Note: credentials.json / token.json live in ~/.google-docs-mcp/ and are
+    NOT committed; ~/.claude.json (the MCP registration) is also not in this repo.
+
 Shell config:
 
     All settings are in common.sh. Both bashrc and zshrc source it,
